@@ -10,25 +10,95 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class='container'>
+    <div class="header-container">
+      <div class="header">
+    <div class="churchofnigerialogo"> <%= image_tag("churchOfNigLogo.jpg", size: "120") %> 
+    </div>
+      <div class"churchname">
+        <h1>ST. PAUL'S CATHEDRAL DIOBU PORTHARCOURT</h1>
+           <p>THE CITY OF GOD</p>
+      </div>
+    <div class="nigerDeltalogo"> <%= image_tag("nigerDeltalogo.jpg", size: "130") %>
+     </div>
+      </div>
+      </div>
+      
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
       </button>
-      <a href="/" class="navbar-brand">SaaS</a>
+      <%= link_to root_path, class: "navbar-brand" do %>
+       <i class="fa fa-home"></i> Home<% end %>
     </div>
-    <div class="collapse navbar-collapse" id="main-nav-collapse">
-      <ul class="nav navbar-nav navbar-right">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Our Church <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="pastoral">Pastoral Leadership</a></li>
+            <li><a href="/history">History and Heritage</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/">Our Faith <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/whyAnglican">Why Anglican?</a></li>
+            <li><a href="/becomingAnglican">Becoming Anglican<br> Christian</a></li>
+            <li><a href="/returningToChurch">Returning to<br>Church</a></li>
+            </ul>
+            </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sermon <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/firstService">First Service</a></li>
+          <li><a href="/secondService">Second Service</a></li>
+          <li><a href="/combineService">Combine Service</a></li>
+          <li><a href="/otherService">Other Service</a></a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ministries <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/youthMinistry">Youth Ministry</a></li>
+          <li><a href="/teenageMinistry">Teenage Ministry</a></li>
+          <li><a href="/childrenMinistry">Children Ministry</a></li>
+          <li><a href="/faithClinic">Faith Clinic</a></li>
+          <li><a href="/schoolOfMinistry">School Of Minitry</a></a></li>
+          <li><a href="foundationBibleClass">Foundation Bible<br>Class</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Out Reach<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/hospitalVisitation">Hospital Visitation</a></li>
+          <li><a href="/prisonVisitation">Prison Vistation</a></li>
+          <li><a href="/welfare">Welfare</a></li>
+          <li><a href="/evangelism">Evangelism</a></a></li>
+          <li><a href="#">Aged People's<br>Visitation</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resource <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/news">News</a></li>
+          <li><a href="/sundayBulletin">Sunday Bulletin</a></li>
+          <li><a href="/onlinGiving">Online Giving</a></li>
+          <li><a href="/todaysReading">Today's Reading</a></a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="/athletics">Athletics</a></li>
+        </ul>
+        </li>
         <li><a href="/about">About</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
   </div>
 </nav>
-
     <%= yield %>
   </body>
 </html>
